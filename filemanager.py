@@ -11,26 +11,16 @@ def get_user_id():
     return getpass.getuser()
 
 class file_management:
-    def __init__(self):
-        self.root_exists = False
-        self.file_path = "C:/Users/" + get_user_id() + "/AppData/Local/Monitor/"
-        self.group_name = "Websites.txt"
+
+    file_path = "C:/Users/" + get_user_id() + "/AppData/Local/Monitor/"
+    group_name = "Websites.txt"
          
     def path_exists(self, file=""):
         return os.path.exists(self.file_path + file)
     
     def create_group_dir(self):
-        if self.path_exists() is True:
-            return
-        else:
-            os.mkdir(self.file_path)
-            self.root_exists = True
+        os.mkdir(self.file_path)
             
-    def create_group_file(self, group_name):
-        group_name = group_name + ".txt"
-        if self.path_exists(group_name):
-             print("File already exists")
-        else:
-            with open(os.path.join(self.file_path, group_name), 'w+') as file:
-                file.write("")
-            print("file created")
+    def create_group_file(self):
+        with open(os.path.join(self.file_path, self.group_name), 'w') as file:
+            file.write("")
