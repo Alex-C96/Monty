@@ -14,7 +14,7 @@ and create a shortcut and move it to your desktop for quick access.
 Add which websites you want to open with Monty.
 Open sites quickly to get boards up for monitoring.
 
-## Roadmanp
+## Roadmap
 - [x] Add exe file for quick installation
 - [ ] Add GUI for Monty
 - [ ] Create seperate groups for website files
